@@ -1,5 +1,6 @@
-spring:
-  port: 5000
 security:
   basic:
     enabled: false
+solucion:
+  id:121
+  
