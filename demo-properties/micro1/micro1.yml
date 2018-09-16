@@ -1,6 +1,9 @@
+spring:
+  h2:
+    console:
+      enabled: true
 security:
   basic:
     enabled: false
 solucion:
-  id:121
-  
+  id: 1234

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoMicro1Controller {
 
-	@Value("${spring.port}")
+	@Value("${solucion.id}")
     private String prop;
 	
 	protected Logger logger = Logger.getLogger(DemoMicro1Controller.class.getName());
