@@ -8,5 +8,5 @@ spring:
           uri: https://github.com/enriquecamejo/garbanzo.git/
           #uri: https://github.com/srast3/spring-kafka-microservice.git/
           search-paths:
-              - "demo-properties"
+              - "demo-properties/{application}"
          #    - "EmailServiceConfigProperties"
