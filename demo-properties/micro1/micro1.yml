@@ -1,5 +1,8 @@
-security:
-  basic:
-    enabled: false
-solucion:
-  id: 1234
+solucion_1:
+  tipo: orquestacion
+  pasos: "conectorentrada;transformacion_mayusculas;conectorsalida"
+ 
+solucion_2:
+  tipo: orquestacion
+  pasos: "conectorentrada;transformacion_mayusculas;conectorsalida"
+ 
