@@ -3,6 +3,6 @@ solucion_1:
   pasos: "conectorentrada;transformacion_mayusculas;conectorsalida"
  
 solucion_2:
-  tipo: orquestacion
+  tipo: coreografia
   pasos: "conectorentrada;transformacion_mayusculas;conectorsalida"
  
