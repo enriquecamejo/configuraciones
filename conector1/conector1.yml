@@ -22,4 +22,4 @@ solucion:
     s2: req-resp
     
 logging:
-  config: ${configserver.discovered.uri}/logback/default/logback-spring.xml?useDefaultLabel
+  config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
