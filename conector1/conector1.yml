@@ -20,3 +20,6 @@ solucion:
   tipoComunicacion:
     s1: one-way
     s2: req-resp
+    
+logging:
+  config: ${configserver.discovered.uri}/logback/default/logback-spring.xml?useDefaultLabel
