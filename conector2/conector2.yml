@@ -7,12 +7,12 @@ spring:
   cloud:
     stream:
       bindings:
-        correcta:
+        correctasChannel:
           destination: transformacionMessagesFinalS1
           group: conector2IntakeGroupS1
           consumer:
             maxAttempts: 1
-        errores:
+        erroresChannel:
           destination: conector1MessagesErrorS1
           group: conector2IntakeGroupS1Errores
           consumer:
