@@ -30,3 +30,6 @@ transformacion:
       paso3: xslt/minuscula.xsl
       paso4: xslt/mayuscula.xsl
       paso5: xslt/minuscula.xsl
+      
+logging:
+  config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
