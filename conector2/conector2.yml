@@ -7,9 +7,19 @@ spring:
   cloud:
     stream:
       bindings:
-        input:
+        correcta:
           destination: transformacionMessagesFinalS1
           group: conector2IntakeGroupS1
           consumer:
             maxAttempts: 1
+        errores:
+          destination: conector1MessagesErrorS1
+          group: conector2IntakeGroupS1Errores
+          consumer:
+            maxAttempts: 1
             
+            
+solucion:
+  tipoComunicacion:
+    s1: one-way
+    s2: req-resp
