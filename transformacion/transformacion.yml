@@ -10,17 +10,20 @@ spring:
   cloud:
     stream:
       bindings:
-        input:
+        transformacionSubscribableChannel:
           destination: conector1MessagesS1
           group: transformacionesPaso5IntakeGroupS1
           consumer:
             maxAttempts: 1
-        output:
+        transformacionMessagesChannel:
           destination: transformacionMessagesFinalS1
           consumer:
             maxAttempts: 1
-#transformacion:
-#  class: transformacionMayuscula
+        transformacionMessagesChannelErrores:
+          destination: conector1MessagesErrorS1
+          consumer:
+            maxAttempts: 1    
+
 
 transformacion: 
   xslt:
@@ -30,6 +33,11 @@ transformacion:
       paso3: xslt/minuscula.xsl
       paso4: xslt/mayuscula.xsl
       paso5: xslt/minuscula.xsl
+      
+solucion:
+  tipoComunicacion:
+    s1: one-way
+    s2: req-resp
       
 logging:
   config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
