@@ -40,10 +40,12 @@ transformacion:
       paso4: xslt/mayuscula.xsl
       paso5: xslt/minuscula.xsl
       
+          
 solucion:
-  tipoComunicacion:
-    s1: one-way
-    s2: req-resp
+  s1: 
+    tipoComunicacion: one-way
+  s2:
+    tipoComunicacion: req-resp
       
 logging:
   config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml

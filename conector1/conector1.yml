@@ -15,11 +15,12 @@ spring:
           destination: conector1MessagesErrorS1
           consumer:
             maxAttempts: 1    
- 
+     
 solucion:
-  tipoComunicacion:
-    s1: one-way
-    s2: req-resp
+  s1: 
+    tipoComunicacion: one-way
+  s2:
+    tipoComunicacion: req-resp
     
 logging:
   config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
