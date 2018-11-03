@@ -14,6 +14,11 @@ spring:
         conector1MessagesErrorChannel:
           destination: conector1MessagesErrorS1
           consumer:
+            maxAttempts: 1
+        replayChannel:
+          destination: transformacionMessagesFinalS1
+          group: conector1IntakeGroupS1Replays
+          consumer:
             maxAttempts: 1    
      
 solucion:
