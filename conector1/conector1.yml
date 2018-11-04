@@ -17,8 +17,7 @@ spring:
             maxAttempts: 1
         replayChannel:
           destination: replayChannel
-          producer:
-            required-groups: conector1IntakeGroupS1Replays
+          group: conector1IntakeGroupS1Replays
           consumer:
             maxAttempts: 1    
      
