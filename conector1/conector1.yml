@@ -16,7 +16,6 @@ spring:
           consumer:
             maxAttempts: 1
         replayChannel:
-          contentType: application/xml
           destination: replayChannel
           group: conector1IntakeGroupS1Replays
           consumer:
