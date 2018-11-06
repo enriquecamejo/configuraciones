@@ -7,6 +7,10 @@ spring:
   cloud:
     stream:
       bindings:
+        input:
+          destination: conector1MessagesS1
+          consumer:
+            maxAttempts: 1
         conector1MessagesChannel:
           destination: conector1MessagesS1
           consumer:
@@ -15,6 +19,10 @@ spring:
           destination: conector1MessagesErrorS1
           consumer:
             maxAttempts: 1
+        output:
+          destination: replayChannel
+          consumer:
+            maxAttempts: 1    
         replayChannel:
           destination: replayChannel
           consumer:
