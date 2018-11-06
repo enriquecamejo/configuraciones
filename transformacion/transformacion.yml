@@ -16,6 +16,7 @@ spring:
           consumer:
             maxAttempts: 1
         transformacionMessagesChannel:
+          content-type: application/xml
           destination: replayChannel
           consumer:
             maxAttempts: 1
