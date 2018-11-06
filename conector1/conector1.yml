@@ -8,7 +8,6 @@ spring:
     stream:
       bindings:
         conector1MessagesChannel:
-          content-type: application/xml
           destination: conector1MessagesS1
           consumer:
             maxAttempts: 1
@@ -17,8 +16,8 @@ spring:
           consumer:
             maxAttempts: 1
         replayChannel:
-          content-type: application/xml
           destination: replayChannel
+          group: conector1IntakeGroupS1Replays
           consumer:
             maxAttempts: 1    
      
