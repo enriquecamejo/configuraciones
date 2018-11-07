@@ -12,7 +12,7 @@ spring:
           group: conector2IntakeGroupS1
           consumer:
             maxAttempts: 1
-        erroresChannel:
+        respuestasChannel:
           destination: replayChannel
           consumer:
             maxAttempts: 1
