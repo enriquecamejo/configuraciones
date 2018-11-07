@@ -13,8 +13,7 @@ spring:
           consumer:
             maxAttempts: 1
         erroresChannel:
-          destination: conector1MessagesErrorS1
-          group: conector2IntakeGroupS1Errores
+          destination: replayChannel
           consumer:
             maxAttempts: 1
             

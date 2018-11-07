@@ -16,11 +16,11 @@ spring:
           consumer:
             maxAttempts: 1
         transformacionMessagesChannel:
-          destination: replayChannel
+          destination: transformacionMessagesFinalS1
           consumer:
             maxAttempts: 1
         transformacionMessagesChannelErrores:
-          destination: conector1MessagesErrorS1
+          destination: replayChannel
           consumer:
             maxAttempts: 1    
 
