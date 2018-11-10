@@ -16,6 +16,10 @@ spring:
           destination: replayChannel
           consumer:
             maxAttempts: 1
+        conector2ReplyChannel:
+          destination: conector2Replay
+          consumer:
+            maxAttempts: 1
             
 conectorSalida:
   s2:
