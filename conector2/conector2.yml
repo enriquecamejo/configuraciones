@@ -17,6 +17,10 @@ spring:
           consumer:
             maxAttempts: 1
             
+conectorSalida:
+  s2:
+    clienteWSDL: http://localhost:8080/cliente2/services/ServicioPersona?wsdl
+    requestParam1:  ci
             
 solucion:
   s1: 
