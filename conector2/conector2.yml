@@ -23,7 +23,7 @@ spring:
             
 conectorSalida:
   s2:
-    clienteWSDL: http://localhost:8080/cliente2/services/ServicioPersona?wsdl
+    clienteWSDL: http://localhost:9001/ws/personas.wsdl
     requestParam1:  ci
             
 solucion:
