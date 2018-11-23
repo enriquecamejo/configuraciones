@@ -7,15 +7,15 @@ spring:
   cloud:
     stream:
       bindings:
-        transformacionSubscribableChannel:
-          destination: conector1MessagesS1
-          group: transformacionesPasoJIntakeGroupS1
-          consumer:
-            maxAttempts: 1
-        transformacionMessagesChannel:
-          destination: transformacionMessagesConector2S1
-          consumer:
-            maxAttempts: 1
+#        transformacionSubscribableChannel:
+#          destination: conector1MessagesS1
+#          group: transformacionesPasoJIntakeGroupS1
+#          consumer:
+#            maxAttempts: 1
+#        transformacionMessagesChannel:
+#          destination: transformacionMessagesConector2S1
+#          consumer:
+#            maxAttempts: 1
         transformacionMessagesChannelErrores:
           destination: replayChannel
           consumer:
