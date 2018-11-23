@@ -20,11 +20,11 @@ spring:
           destination: replayChannel
           consumer:
             maxAttempts: 1
-#        transformacionReplySubscribableChannel:
-#          destination: conector2Replay
-#          group: transformacionesReplyPaso2IntakeGroup
-#          consumer:
-#            maxAttempts: 1
+        transformacionReplySubscribableChannel:
+          destination: conector2Replay
+          group: transformacionesReplyPasoNIntakeGroup
+          consumer:
+            maxAttempts: 1
       
 
 
