@@ -3,7 +3,7 @@ spring:
     host: localhost
     port: 5672
     username: guest
-    password: guest
+    password: guest          
   cloud:
     stream:
       bindings:
@@ -13,23 +13,20 @@ spring:
           consumer:
             maxAttempts: 1
         transformacionMessagesChannel:
-          destination: transformacionPaso1MessagesS1
+          destination: transformacionMessagesConector2S1
           consumer:
             maxAttempts: 1
         transformacionMessagesChannelErrores:
-          destination: conector1MessagesErrorS1
+          destination: replayChannel
           consumer:
-            maxAttempts: 1    
+            maxAttempts: 1
+#        transformacionReplySubscribableChannel:
+#          destination: conector2Replay
+#          group: transformacionesReplyPaso2IntakeGroup
+#          consumer:
+#            maxAttempts: 1
       
-#        input:
-#          destination: conector1MessagesS1
-#          group: transformacionesPaso1IntakeGroupS1
-#          consumer:
-#            maxAttempts: 1
-#        output:
-#          destination: transformacionPaso1MessagesS1
-#          consumer:
-#            maxAttempts: 1
+
 
 transformacion: 
   xslt:

@@ -8,7 +8,7 @@ spring:
     stream:
       bindings:
         correctasChannel:
-          destination: transformacionMessagesFinalS1
+          destination: transformacionMessagesConector2S1
           group: conector2IntakeGroupS1
           consumer:
             maxAttempts: 1
