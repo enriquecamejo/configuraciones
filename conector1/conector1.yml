@@ -20,8 +20,10 @@ spring:
 solucion:
   s1: 
     tipoComunicacion: one-way
+    tipoComposicion: coreografia
   s2:
     tipoComunicacion: req-resp
+    tipoComposicion: coreografia
     
 logging:
   config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
