@@ -1,0 +1,6 @@
+logging:
+  config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
+  
+solucion:
+  s1: 
+    itinerario: transformacion1,conector2
