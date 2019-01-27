@@ -3,4 +3,4 @@ logging:
   
 solucion:
   s1: 
-    itinerario: localhost:8084,conector2
+    itinerario: TRANSFORMACION1,conector2
