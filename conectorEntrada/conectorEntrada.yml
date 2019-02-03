@@ -1,0 +1,29 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        conector1MessagesChannel:
+          destination: conector1MessagesS1
+          consumer:
+            maxAttempts: 1
+        replayChannel:
+          destination: replayChannel
+          group: conector1IntakeGroupS1Replays
+          consumer:
+            maxAttempts: 1    
+     
+solucion:
+  s1: 
+    tipoComunicacion: one-way
+    tipoComposicion: coreografia
+  s2:
+    tipoComunicacion: req-resp
+    tipoComposicion: coreografia
+    
+logging:
+  config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
