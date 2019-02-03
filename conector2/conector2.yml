@@ -31,7 +31,6 @@ solucion:
     tipoComunicacion: one-way
   s2:
     tipoComunicacion: req-resp
-    clienteURL: http://localhost:9000/respuestaSolicitud
   
     
 logging:
