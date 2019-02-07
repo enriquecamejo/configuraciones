@@ -53,5 +53,5 @@ spring:
 logging:
   config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
   
-soluciones:
-  config: ${configserver.discovered.uri}/logback/default/master/soluciones.yml
+#soluciones:
+#  config: ${configserver.discovered.uri}/logback/default/master/soluciones.yml
