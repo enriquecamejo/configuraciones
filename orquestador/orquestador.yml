@@ -5,4 +5,4 @@ solucion:
   s1: 
     itinerario: TRANSFORMACION1,conector2
   s2: 
-    itinerario: TRANSFORMACION1,conector2
+    itinerario: transformacionjsonxml,enriquecedor,conectorSalida,transformacionxmljson
