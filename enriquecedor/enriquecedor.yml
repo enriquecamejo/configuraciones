@@ -7,7 +7,7 @@ spring:
     
 enricher: 
   s2:
-    paso1: 
+    paso2: 
       usuario: proygrado
       password: proygrado2019
     
