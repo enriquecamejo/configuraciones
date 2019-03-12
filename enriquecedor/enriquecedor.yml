@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    
+enricher: 
+  s2:
+    paso1: 
+      usuario: proygrado
+      password: proygrado2019
+    
+logging:
+  config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
