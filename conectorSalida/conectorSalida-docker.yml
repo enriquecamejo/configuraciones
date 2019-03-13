@@ -23,7 +23,7 @@ spring:
             
 conectorSalida:
   s2:
-    clienteWSDL: http://localhost:9002/ws/empresas.wsdl
+    clienteWSDL: http://clientefinalsoap:9002/ws/empresas.wsdl
     requestParam1:  razonSocial
             
 solucion:
