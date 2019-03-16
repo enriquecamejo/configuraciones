@@ -4,26 +4,26 @@ spring:
     port: 5672
     username: guest
     password: guest
-  cloud:
-    stream:
-      bindings:
-        conector1MessagesChannel:
-          destination: conector1Messages
-          consumer:
-            maxAttempts: 1
-        replayChannel:
-          destination: replayChannel
-          group: conector1QueueReplays
-          consumer:
-            maxAttempts: 1    
+#  cloud:
+#    stream:
+#      bindings:
+#        conector1MessagesChannel:
+#          destination: conector1Messages
+#          consumer:
+#            maxAttempts: 1
+#        replayChannel:
+#          destination: replayChannel
+#          group: conector1QueueReplays
+#          consumer:
+#            maxAttempts: 1    
      
 solucion:
   s1: 
-    tipoComunicacion: one-way
+#    tipoComunicacion: one-way
     tipoComposicion: orquestacion
   s2:
-    tipoComunicacion: req-resp
-    tipoComposicion: orquestacion
+#    tipoComunicacion: req-resp
+    tipoComposicion: coreografia
     
 logging:
   config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
