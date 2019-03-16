@@ -4,6 +4,22 @@ spring:
     port: 5672
     username: guest
     password: guest
+  cloud:
+    stream:
+      bindings:
+        enriquecedorSubscribableChannel:
+          destination: transformacionjsonxmlMessages
+          group: enriquecedorQueue
+          consumer:
+            maxAttempts: 1
+        enriquecedorMessagesChannel:
+          destination: enriquecedorMessages
+          consumer:
+            maxAttempts: 1
+        enriquecedorMessagesChannelErrores:
+          destination: replayMessages
+          consumer:
+            maxAttempts: 1
     
 enricher: 
   s2:
