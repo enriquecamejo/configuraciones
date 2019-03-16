@@ -1,0 +1,37 @@
+spring:
+  rabbitmq:
+    host: broker
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        correctasChannel:
+          destination: transformacionMessagesConector2S1
+          group: conector2IntakeGroupS1
+          consumer:
+            maxAttempts: 1
+        respuestasChannel:
+          destination: replayChannel
+          consumer:
+            maxAttempts: 1
+        conector2ReplyChannel:
+          destination: conector2Replay
+          consumer:
+            maxAttempts: 1
+            
+conectorSalida:
+  s2:
+    clienteWSDL: http://clientefinalsoap:9002/ws/empresas.wsdl
+    requestParam1:  razonSocial
+            
+solucion:
+  s1: 
+    tipoComunicacion: one-way
+  s2:
+    tipoComunicacion: req-resp
+  
+    
+logging:
+  config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml

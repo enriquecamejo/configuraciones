@@ -8,7 +8,7 @@
     	</encoder> 
     </appender>
     <appender name="GELF" class="me.moocar.logbackgelf.GelfUDPAppender">
-        <remoteHost>192.168.2.109</remoteHost>
+        <remoteHost>graylog</remoteHost>
         <port>12201</port>
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <layout class="me.moocar.logbackgelf.GelfLayout">

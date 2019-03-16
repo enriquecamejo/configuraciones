@@ -1,0 +1,52 @@
+spring:
+  rabbitmq:
+    host: broker
+    port: 5672
+    username: guest
+    password: guest          
+  cloud:
+    stream:
+      bindings:
+        transformacionSubscribableChannel:
+          destination: conector1MessagesS1
+          group: transformacionesPaso1IntakeGroupS1
+          consumer:
+            maxAttempts: 1
+        transformacionMessagesChannel:
+          destination: transformacionMessagesConector2S1
+          consumer:
+            maxAttempts: 1
+        transformacionMessagesChannelErrores:
+          destination: replayChannel
+          consumer:
+            maxAttempts: 1
+#        transformacionReplySubscribableChannel:
+#          destination: conector2Replay
+#          group: transformacionesReplyPasoNIntakeGroup
+#          consumer:
+#            maxAttempts: 1
+      
+
+
+transformacion: 
+  xslt:
+    s1:
+      paso1: xslt/minuscula.xsl
+      paso2: xslt/mayuscula.xsl
+      paso3: xslt/minuscula.xsl
+      paso4: xslt/mayuscula.xsl
+      paso5: xslt/minuscula.xsl
+    s2:
+      paso1: xslt/minuscula.xsl
+      paso2: xslt/mayuscula.xsl
+      paso3: xslt/minuscula.xsl
+      paso4: xslt/mayuscula.xsl
+      paso5: xslt/minuscula.xsl
+solucion:
+  s1: 
+    tipoComunicacion: one-way
+  s2:
+    tipoComunicacion: req-resp
+          
+logging:
+  config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
