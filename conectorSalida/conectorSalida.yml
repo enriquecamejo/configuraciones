@@ -7,16 +7,16 @@ spring:
   cloud:
     stream:
       bindings:
-        correctasChannel:
+        conectorSalidaSubscribableChannel:
           destination: enriquecedorMessages
           group: conectorSalidaQueue
           consumer:
             maxAttempts: 1
-        respuestasChannel:
+        conectorSalidaMessagesChannel:
           destination: conectorSalidaMessages
           consumer:
             maxAttempts: 1
-        conectorSalidaReplyChannel:
+        conectorSalidaErrorsChannel:
           destination: replayMessages
           consumer:
             maxAttempts: 1
@@ -26,11 +26,11 @@ conectorSalida:
     clienteWSDL: http://localhost:9002/ws/empresas.wsdl
     requestParam1:  razonSocial
             
-solucion:
-  s1: 
-    tipoComunicacion: one-way
-  s2:
-    tipoComunicacion: req-resp
+#solucion:
+#  s1: 
+#    tipoComunicacion: one-way
+#  s2:
+#    tipoComunicacion: req-resp
   
     
 logging:
