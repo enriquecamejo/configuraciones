@@ -8,16 +8,16 @@ spring:
     stream:
       bindings:
         correctasChannel:
-          destination: transformacionMessagesConector2S1
-          group: conector2IntakeGroupS1
+          destination: enriquecedorMessages
+          group: conectorSalidaQueue
           consumer:
             maxAttempts: 1
         respuestasChannel:
-          destination: replayChannel
+          destination: conectorSalidaMessages
           consumer:
             maxAttempts: 1
-        conector2ReplyChannel:
-          destination: conector2Replay
+        conectorSalidaReplyChannel:
+          destination: replayMessages
           consumer:
             maxAttempts: 1
             

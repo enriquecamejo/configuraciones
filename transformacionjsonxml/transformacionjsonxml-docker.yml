@@ -4,6 +4,22 @@ spring:
     port: 5672
     username: guest
     password: guest
+  cloud:
+    stream:
+      bindings:
+        transformacionSubscribableChannel:
+          destination: conectorEntradaMessages
+          group: transformacionjsonxmlQueue
+          consumer:
+            maxAttempts: 1
+        transformacionMessagesChannel:
+          destination: transformacionjsonxmlMessages
+          consumer:
+            maxAttempts: 1
+        transformacionMessagesChannelErrores:
+          destination: replayMessages
+          consumer:
+            maxAttempts: 1
                     
 logging:
   config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
