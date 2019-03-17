@@ -34,4 +34,4 @@ solucion:
   
     
 logging:
-  config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
+  config: ${configserver.discovered.uri}/logback/default/master/logback-spring-docker.xml

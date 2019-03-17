@@ -51,7 +51,7 @@ solucion:
     tipoComunicacion: req-resp
           
 logging:
-  config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
+  config: ${configserver.discovered.uri}/logback/default/master/logback-spring-docker.xml
   
 #soluciones:
 #  config: ${configserver.discovered.uri}/logback/default/master/soluciones.yml
