@@ -23,7 +23,7 @@ solucion:
     tipoComposicion: orquestacion
   s2:
 #    tipoComunicacion: req-resp
-    tipoComposicion: coreografia
+    tipoComposicion: orquestacion
     
 logging:
   config: ${configserver.discovered.uri}/logback/default/master/logback-spring.xml
