@@ -22,10 +22,9 @@ spring:
             maxAttempts: 1
     
 enricher: 
-  s2: 
-    paso2:
-      usuario: proygrado
-      password: proygrado2019
+  s2:
+    usuario: proygrado
+    password: proygrado2019
     
 logging:
   config: ${configserver.discovered.uri}/logback/default/master/logback-spring-docker.xml
