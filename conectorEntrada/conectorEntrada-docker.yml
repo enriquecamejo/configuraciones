@@ -19,10 +19,8 @@ spring:
      
 solucion:
   s1: 
-    tipoComunicacion: one-way
-    tipoComposicion: orquestacion
+    tipoComposicion: coreografia
   s2:
-    tipoComunicacion: req-resp
     tipoComposicion: orquestacion
     
 logging:
