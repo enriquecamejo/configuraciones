@@ -22,6 +22,9 @@ spring:
             maxAttempts: 1
             
 conectorSalida:
+  s1:
+    clienteWSDL: http://clientefinalsoap:9002/ws/empresas.wsdl
+    requestParam1:  razonSocial
   s2:
     clienteWSDL: http://clientefinalsoap:9002/ws/empresas.wsdl
     requestParam1:  razonSocial
