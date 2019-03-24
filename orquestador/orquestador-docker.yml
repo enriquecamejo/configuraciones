@@ -3,6 +3,6 @@ logging:
   
 solucion:
   s1: 
-    itinerario: TRANSFORMACION1,conector2
+    itinerario: transformacionjsonxml,enriquecedor,conectorSalida,transformacionxmljson
   s2: 
     itinerario: transformacionjsonxml,enriquecedor,conectorSalida,transformacionxmljson
