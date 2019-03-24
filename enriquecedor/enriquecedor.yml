@@ -21,7 +21,10 @@ spring:
           consumer:
             maxAttempts: 1
     
-enricher: 
+enricher:
+  s1: 
+    usuario: proygrado
+    password: proygrado2019
   s2: 
     usuario: proygrado
     password: proygrado2019

@@ -22,6 +22,9 @@ spring:
             maxAttempts: 1
     
 enricher: 
+  s1: 
+    usuario: proygrado
+    password: proygrado2019
   s2:
     usuario: proygrado
     password: proygrado2019
