@@ -17,10 +17,6 @@
                   <key>serviceName</key>
                   <value>${springAppName}</value>
                 </staticField>
-                <staticField class="me.moocar.logbackgelf.Field">
-                  <key>idmessageclient</key>
-                  <value>${idmensaje}</value>
-                </staticField>
             </layout>
         </encoder>
     </appender>
