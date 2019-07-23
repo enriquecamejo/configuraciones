@@ -10,12 +10,8 @@ spring:
         transformacionSubscribableChannel:
           destination: conectorSalidaMessages
           group: transformacionxmljsonQueue
-          consumer:
-            maxAttempts: 1
         transformacionMessagesChannel:
           destination: replayMessages
-          consumer:
-            maxAttempts: 1
                     
 logging:
   config: ${configserver.discovered.uri}/logback/default/master/logback-spring-docker.xml

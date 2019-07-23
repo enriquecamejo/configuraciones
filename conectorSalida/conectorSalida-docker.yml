@@ -10,16 +10,10 @@ spring:
         conectorSalidaSubscribableChannel:
           destination: enriquecedorMessages
           group: conectorSalidaQueue
-          consumer:
-            maxAttempts: 1
         conectorSalidaMessagesChannel:
           destination: conectorSalidaMessages
-          consumer:
-            maxAttempts: 1
         conectorSalidaErrorsChannel:
           destination: replayMessages
-          consumer:
-            maxAttempts: 1
             
 conectorSalida:
   s1:
